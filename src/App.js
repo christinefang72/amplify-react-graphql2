@@ -1,21 +1,6 @@
 import React, { useState, useEffect } from "react";
 import "./App.css";
 import "@aws-amplify/ui-react/styles.css";
-import { API } from "aws-amplify";
-import {
-  Button,
-  Flex,
-  Heading,
-  Text,
-  TextField,
-  View,
-  withAuthenticator,
-} from "@aws-amplify/ui-react";
-import { listNotes } from "./graphql/queries";
-import {
-  createNote as createNoteMutation,
-  deleteNote as deleteNoteMutation,
-} from "./graphql/mutations";
 
 import { API, Storage } from 'aws-amplify';
 import {
@@ -28,6 +13,12 @@ import {
   View,
   withAuthenticator,
 } from '@aws-amplify/ui-react';
+
+import { listNotes } from "./graphql/queries";
+import {
+  createNote as createNoteMutation,
+  deleteNote as deleteNoteMutation,
+} from "./graphql/mutations";
 
 const App = ({ signOut }) => {
   const [notes, setNotes] = useState([]);
@@ -92,6 +83,14 @@ const App = ({ signOut }) => {
             variation="quiet"
             required
           />
+
+        <View
+            name="image"
+            as="input"
+            type="file"
+            style={{ alignSelf: "end" }}
+          />
+
           <TextField
             name="description"
             placeholder="Note Description"
@@ -99,12 +98,6 @@ const App = ({ signOut }) => {
             labelHidden
             variation="quiet"
             required
-          />
-          <View
-            name="image"
-            as="input"
-            type="file"
-            style={{ alignSelf: "end" }}
           />
           <Button type="submit" variation="primary">
             Create Note
@@ -137,6 +130,7 @@ const App = ({ signOut }) => {
         </Flex>
       ))}
       </View>
+      
       <Button onClick={signOut}>Sign Out</Button>
     </View>
   );
