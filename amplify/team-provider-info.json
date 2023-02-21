@@ -14,6 +14,12 @@
     "categories": {
       "auth": {
         "amplifyreactgraphql2aa938547": {}
+      },
+      "api": {
+        "amplifyreactgraphql2": {}
+      },
+      "storage": {
+        "week1exercise": {}
       }
     }
   }

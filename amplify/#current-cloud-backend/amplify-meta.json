@@ -1,0 +1,100 @@
+{
+  "providers": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-amplifyb3841c14fa004-staging-203140-authRole",
+      "UnauthRoleArn": "arn:aws:iam::020636688098:role/amplify-amplifyb3841c14fa004-staging-203140-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::020636688098:role/amplify-amplifyb3841c14fa004-staging-203140-authRole",
+      "Region": "us-east-1",
+      "DeploymentBucketName": "amplify-amplifyb3841c14fa004-staging-203140-deployment",
+      "UnauthRoleName": "amplify-amplifyb3841c14fa004-staging-203140-unauthRole",
+      "StackName": "amplify-amplifyb3841c14fa004-staging-203140",
+      "StackId": "arn:aws:cloudformation:us-east-1:020636688098:stack/amplify-amplifyb3841c14fa004-staging-203140/bf9ca950-b226-11ed-ab28-12d8b75596fd",
+      "AmplifyAppId": "dw9to5ogjbdtv"
+    }
+  },
+  "auth": {
+    "amplifyreactgraphql2aa938547": {
+      "service": "Cognito",
+      "providerPlugin": "awscloudformation",
+      "dependsOn": [],
+      "customAuth": false,
+      "frontendAuthConfig": {
+        "socialProviders": [],
+        "usernameAttributes": [],
+        "signupAttributes": [
+          "EMAIL"
+        ],
+        "passwordProtectionSettings": {
+          "passwordPolicyMinLength": 8,
+          "passwordPolicyCharacters": []
+        },
+        "mfaConfiguration": "OFF",
+        "mfaTypes": [
+          "SMS"
+        ],
+        "verificationMechanisms": [
+          "EMAIL"
+        ]
+      },
+      "providerMetadata": {
+        "s3TemplateURL": "https://s3.amazonaws.com/amplify-amplifyb3841c14fa004-staging-203140-deployment/amplify-cfn-templates/auth/amplifyreactgraphql2aa938547-cloudformation-template.json",
+        "logicalId": "authamplifyreactgraphql2aa938547"
+      },
+      "lastPushTimeStamp": "2023-02-21T21:56:40.464Z",
+      "output": {
+        "UserPoolId": "us-east-1_rBbJSOB8C",
+        "AppClientIDWeb": "71rlog84mkfgtmkm1vgs24lv12",
+        "AppClientID": "o1lnuq5k8pbgqj37cbau22rlb",
+        "IdentityPoolId": "us-east-1:c33f6e3e-d28b-403e-8eb6-db100ea8c586",
+        "UserPoolArn": "arn:aws:cognito-idp:us-east-1:020636688098:userpool/us-east-1_rBbJSOB8C",
+        "IdentityPoolName": "amplifyreactgraphql2aa938547_identitypool_aa938547__staging",
+        "UserPoolName": "amplifyreactgraphql2aa938547_userpool_aa938547"
+      },
+      "lastPushDirHash": "Gfpmv0iRqj97diZARMtnd+3jT20="
+    }
+  },
+  "api": {
+    "amplifyreactgraphql2": {
+      "service": "AppSync",
+      "providerPlugin": "awscloudformation",
+      "dependsOn": [],
+      "output": {
+        "authConfig": {
+          "defaultAuthentication": {
+            "authenticationType": "API_KEY",
+            "apiKeyConfig": {
+              "apiKeyExpirationDays": 7
+            }
+          },
+          "additionalAuthenticationProviders": []
+        },
+        "GraphQLAPIIdOutput": "g6gknxam3vctlmgievxoexdw7i",
+        "GraphQLAPIEndpointOutput": "https://rwcbn4772nh75cg3vufnvbfssu.appsync-api.us-east-1.amazonaws.com/graphql",
+        "GraphQLAPIKeyOutput": "da2-bpkrq3ixdzavrc6fr6j3jo6nj4"
+      },
+      "providerMetadata": {
+        "s3TemplateURL": "https://s3.amazonaws.com/amplify-amplifyb3841c14fa004-staging-203140-deployment/amplify-cfn-templates/api/cloudformation-template.json",
+        "logicalId": "apiamplifyreactgraphql2"
+      },
+      "lastPushTimeStamp": "2023-02-21T21:56:42.080Z",
+      "lastPushDirHash": "gCzpwNFq55UzqrTO9CxxSgZhgeI="
+    }
+  },
+  "storage": {
+    "week1exercise": {
+      "service": "S3",
+      "providerPlugin": "awscloudformation",
+      "dependsOn": [],
+      "lastPushTimeStamp": "2023-02-21T21:56:42.080Z",
+      "providerMetadata": {
+        "s3TemplateURL": "https://s3.amazonaws.com/amplify-amplifyb3841c14fa004-staging-203140-deployment/amplify-cfn-templates/storage/cloudformation-template.json",
+        "logicalId": "storageweek1exercise"
+      },
+      "output": {
+        "BucketName": "amplifyreactgraphql2a74aa5439d18452294afc2016df203140-staging",
+        "Region": "us-east-1"
+      },
+      "lastPushDirHash": "nrkd7SDcz0f7XbmJ3dkn3BCzRzg="
+    }
+  }
+}

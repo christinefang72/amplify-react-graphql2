@@ -1,0 +1,12 @@
+{
+  "resourceName": "week1exercise",
+  "policyUUID": "7e86d452",
+  "bucketName": "amplifyreactgraphql2a74aa5439d18452294afc2016df",
+  "storageAccess": "auth",
+  "guestAccess": [],
+  "authAccess": [
+    "READ"
+  ],
+  "triggerFunction": "NONE",
+  "groupAccess": {}
+}
